@@ -1,0 +1,17 @@
+{
+    "name": "CustomerSelfRegistrationCreateTicket",
+    "version": "5.0.1",
+    "framework": [
+        "4.0.x",
+        "5.0.x"
+    ],
+    "vendor": {
+        "name":  "Perl-Services.de",
+        "url": "http://www.perl-services.de"
+    },
+    "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
+    "description" : {
+        "en": "Do not send any requests to the cloud",
+        "de": "Sende keine Anfragen an die Cloud"
+    }
+}
