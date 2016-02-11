@@ -11,7 +11,7 @@
     },
     "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
     "description" : {
-        "en": "Do not send any requests to the cloud",
-        "de": "Sende keine Anfragen an die Cloud"
+        "en": "Create a ticket when a customer registers him/herself",
+        "de": "Erzeugt ein Ticket wenn ein Kunde/eine Kundin sich selbst registriert"
     }
 }
