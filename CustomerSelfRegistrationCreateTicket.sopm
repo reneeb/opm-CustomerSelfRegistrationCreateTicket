@@ -2,17 +2,20 @@
 <otrs_package version="1.0">
     <!-- GENERATED WITH OTRS::OPM::Maker::Command::sopm (1.33) -->
     <Name>CustomerSelfRegistrationCreateTicket</Name>
-    <Version>5.0.1</Version>
+    <Version>5.0.2</Version>
     <Framework>4.0.x</Framework>
     <Framework>5.0.x</Framework>
     <Vendor>Perl-Services.de</Vendor>
     <URL>http://www.perl-services.de</URL>
-    <Description Lang="de">Erzeugt ein Ticket wenn ein Kunde/eine Kundin sich selbst registriert</Description>
-    <Description Lang="en">Create a ticket when a customer registers him/herself</Description>
+    <Description Lang="de">Erzeugt ein Ticket wenn ein Kunde/eine Kundin sich selbst registriert.</Description>
+    <Description Lang="en">Create a ticket when a customer registers him/herself.</Description>
+    <Description Lang="hu">Egy jegy létrehozása, ha egy ügyfél regisztrálja magát.</Description>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
     <Filelist>
         <File Permission="644" Location="Custom/Kernel/System/CustomerUser/Event/SelfRegistrationCreateTicket.pm" />
         <File Permission="644" Location="Kernel/Config/Files/CustomerSelfRegistrationCreateTicket.xml" />
+        <File Permission="644" Location="Kernel/Language/de_CustomerSelfRegistrationCreateTicket.pm" />
+        <File Permission="644" Location="Kernel/Language/hu_CustomerSelfRegistrationCreateTicket.pm" />
         <File Permission="644" Location="doc/CustomerSelfRegistrationCreateTicket.json" />
     </Filelist>
 </otrs_package>

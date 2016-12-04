@@ -1,17 +1,18 @@
 {
     "name": "CustomerSelfRegistrationCreateTicket",
-    "version": "5.0.1",
+    "version": "5.0.2",
     "framework": [
         "4.0.x",
         "5.0.x"
     ],
     "vendor": {
-        "name":  "Perl-Services.de",
+        "name": "Perl-Services.de",
         "url": "http://www.perl-services.de"
     },
     "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
     "description" : {
-        "en": "Create a ticket when a customer registers him/herself",
-        "de": "Erzeugt ein Ticket wenn ein Kunde/eine Kundin sich selbst registriert"
+        "en": "Create a ticket when a customer registers him/herself.",
+        "de": "Erzeugt ein Ticket wenn ein Kunde/eine Kundin sich selbst registriert.",
+        "hu": "Egy jegy létrehozása, ha egy ügyfél regisztrálja magát."
     }
 }

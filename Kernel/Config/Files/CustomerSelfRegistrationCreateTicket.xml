@@ -5,7 +5,7 @@
         <Group>CustomerSelfRegistrationCreateTicket</Group>
         <SubGroup>Core</SubGroup>
         <Setting>
-            <String Regex="">New CustomerUser</String>
+            <String Regex="" Translatable="1">New Customer User</String>
         </Setting>
     </ConfigItem>
     <ConfigItem Name="CUSRTC::Queue" Required="0" Valid="1">
@@ -33,7 +33,7 @@
         </Setting>
     </ConfigItem>
     <ConfigItem Name="CUSRTC::Body" Required="0" Valid="1">
-        <Description Translatable="1">Queue for ticket.</Description>
+        <Description Translatable="1">Body for ticket.</Description>
         <Group>CustomerSelfRegistrationCreateTicket</Group>
         <SubGroup>Core</SubGroup>
         <Setting>
