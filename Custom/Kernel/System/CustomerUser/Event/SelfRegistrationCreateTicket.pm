@@ -76,7 +76,7 @@ sub Run {
     }
 
     my $Title = $LanguageObject->Translate(
-        $ConfigObject->Get('CUSRTC::Title') // 'CustomerUser Created',
+        $ConfigObject->Get('CUSRTC::Title') // 'Customer User Created',
     );
 
     my $Queue    = $ConfigObject->Get('CUSRTC::Queue')    // 'Misc';
@@ -101,7 +101,9 @@ sub Run {
     my $LayoutObject = $LocalOM->Get('Kernel::Output::HTML::Layout');
 
     my $Body = $LayoutObject->Output(
-        Template => ( $ConfigObject->Get('CUSRTC::Body') // 'New User: [% Data.UserLogin %]' ),
+        Template => (
+            $ConfigObject->Get('CUSRTC::Body') // $LanguageObject->Translate('New User') . ': [% Data.UserLogin %]'
+        ),
         Data     => $Param{Data}->{NewData},
     );
 
