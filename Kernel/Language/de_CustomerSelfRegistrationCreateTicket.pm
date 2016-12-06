@@ -19,17 +19,17 @@ sub Data {
     my $Lang = $Self->{Translation} || {};
 
     # Custom/Kernel/System/CustomerUser/Event/SelfRegistrationCreateTicket.pm
-    $Lang->{'Customer User Created'} = '';
-    $Lang->{'New User'} = '';
+    $Lang->{'Customer User Created'} = 'Neuer Kundenbenutzer erstellt';
+    $Lang->{'New User'} = 'Neuer Benutzer';
 
     # Kernel/Config/Files/CustomerSelfRegistrationCreateTicket.xml
-    $Lang->{'Title for ticket.'} = '';
-    $Lang->{'New Customer User'} = '';
-    $Lang->{'Queue for ticket.'} = '';
-    $Lang->{'Priority for ticket.'} = '';
-    $Lang->{'State for ticket.'} = '';
-    $Lang->{'Body for ticket.'} = '';
-    $Lang->{'Event module that creates a ticket when a customer registers himself.'} = '';
+    $Lang->{'Title for ticket.'} = 'Titel für das Ticket';
+    $Lang->{'New Customer User'} = 'Neuer Kundenbenutzer';
+    $Lang->{'Queue for ticket.'} = 'Queue für das Ticket';
+    $Lang->{'Priority for ticket.'} = 'Priorität für das Ticket';
+    $Lang->{'State for ticket.'} = 'Status für das Ticket';
+    $Lang->{'Body for ticket.'} = 'Text für das Ticket';
+    $Lang->{'Event module that creates a ticket when a customer registers himself.'} = 'Eventmodul, das ein Ticket erstellt wenn ein Kundenbenutzer sich selbst registriert.';
 }
 
 1;
