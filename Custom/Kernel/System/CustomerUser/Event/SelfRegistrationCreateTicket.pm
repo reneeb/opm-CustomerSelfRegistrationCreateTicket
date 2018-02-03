@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2016 Perl-Services.de, http://perl-services.de
+# Copyright (C) 2016 - 2018 Perl-Services.de, http://perl-services.de
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -18,6 +18,7 @@ our @ObjectDependencies = qw(
     Kernel::Language
     Kernel::System::Log
     Kernel::System::Ticket
+    Kernel::System::Ticket::Article
 );
 
 sub new {
@@ -37,6 +38,7 @@ sub Run {
     my $LanguageObject = $Kernel::OM->Get('Kernel::Language');
     my $LogObject      = $Kernel::OM->Get('Kernel::System::Log');
     my $TicketObject   = $Kernel::OM->Get('Kernel::System::Ticket');
+    my $ArticleObject  = $Kernel::OM->Get('Kernel::System::Ticket::Article');
 
     # create ticket only when customer user registered itself
     my $IsSelfRegistered;
@@ -111,18 +113,18 @@ sub Run {
         String => $Body,
     );
 
-    $TicketObject->ArticleCreate(
-        TicketID       => $TicketID,
-        ArticleType    => 'note-internal',
-        SenderType     => 'system',
-        From           => $Param{Data}->{NewData}->{UserEmail},
-        To             => 'otrs@localhost',
-        Subject        => $Title,
-        Body           => $Body,
-        ContentType    => 'text/html; charset=utf-8',
-        HistoryType    => 'AddNote',
-        HistoryComment => '%%',
-        UserID         => 1,
+    $Kernel::OM->Get('Kernel::System::Ticket::Article::Backend::Internal')->ArticleCreate(
+        TicketID             => $TicketID,
+        SenderType           => 'system',
+        IsVisibleForCustomer => 0,
+        From                 => $Param{Data}->{NewData}->{UserEmail},
+        To                   => 'otrs@localhost',
+        Subject              => $Title,
+        Body                 => $Body,
+        ContentType          => 'text/html; charset=utf-8',
+        HistoryType          => 'AddNote',
+        HistoryComment       => '%%',
+        UserID               => 1,
     );
 
     return 1;

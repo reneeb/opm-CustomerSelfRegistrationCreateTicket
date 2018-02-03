@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="2.0" init="Config">
+    <Setting Name="CUSRTC::Title" Required="0" Valid="1">
+        <Description Translatable="1">Title for ticket.</Description>
+        <Navigation>OPAR::CustomerSelfRegistrationCreateTicket::Core</Navigation>
+        <Value>
+            <Item ValueType="String" ValueRegex="" Translatable="1">New Customer User</Item>
+        </Value>
+    </Setting>
+    <Setting Name="CUSRTC::Queue" Required="0" Valid="1">
+        <Description Translatable="1">Queue for ticket.</Description>
+        <Navigation>OPAR::CustomerSelfRegistrationCreateTicket::Core</Navigation>
+        <Value>
+            <Item ValueType="String" ValueRegex="">Misc</Item>
+        </Value>
+    </Setting>
+    <Setting Name="CUSRTC::Priority" Required="0" Valid="1">
+        <Description Translatable="1">Priority for ticket.</Description>
+        <Navigation>OPAR::CustomerSelfRegistrationCreateTicket::Core</Navigation>
+        <Value>
+            <Item ValueType="String" ValueRegex="">3 normal</Item>
+        </Value>
+    </Setting>
+    <Setting Name="CUSRTC::State" Required="0" Valid="1">
+        <Description Translatable="1">State for ticket.</Description>
+        <Navigation>OPAR::CustomerSelfRegistrationCreateTicket::Core</Navigation>
+        <Value>
+            <Item ValueType="String" ValueRegex="">new</Item>
+        </Value>
+    </Setting>
+    <Setting Name="CUSRTC::Body" Required="0" Valid="1">
+        <Description Translatable="1">Body for ticket.</Description>
+        <Navigation>OPAR::CustomerSelfRegistrationCreateTicket::Core</Navigation>
+        <Value>
+            <Item ValueType="Textarea">
+<![CDATA[ [% Data.UserLogin %] just registered.<br /><br />
+[% Config("HttpType") %]://[% Config("FQDN") %]/[% Config("ScriptAlias") %]/index.pl?Action=AdminCustomerUser;Subaction=Change;ID=[% Data.UserLogin | uri %];Nav=Agent
+]]>
+            </Item>
+        </Value>
+    </Setting>
+    <Setting Name="CustomerUser::EventModulePost###108-SelfRegistrationCreateTicket" Required="0" Valid="1">
+        <Description Translatable="1">Event module that creates a ticket when a customer registers himself.</Description>
+        <Navigation>OPAR::CustomerSelfRegistrationCreateTicket::Core</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::System::CustomerUser::Event::SelfRegistrationCreateTicket</Item>
+                <Item Key="Event">CustomerUserAdd</Item>
+                <Item Key="Transaction">0</Item>
+            </Hash>
+        </Value>
+    </Setting>
+</otrs_config>
