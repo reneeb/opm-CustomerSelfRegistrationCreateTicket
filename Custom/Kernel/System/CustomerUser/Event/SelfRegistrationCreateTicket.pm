@@ -115,7 +115,7 @@ sub Run {
 
     $Kernel::OM->Get('Kernel::System::Ticket::Article::Backend::Internal')->ArticleCreate(
         TicketID             => $TicketID,
-        SenderType           => 'system',
+        SenderType           => 'customer',
         IsVisibleForCustomer => 0,
         From                 => $Param{Data}->{NewData}->{UserEmail},
         To                   => 'otrs@localhost',
