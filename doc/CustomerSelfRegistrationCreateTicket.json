@@ -16,5 +16,8 @@
         "en": "Create a ticket when a customer registers him/herself.",
         "de": "Erzeugt ein Ticket wenn ein Kunde/eine Kundin sich selbst registriert.",
         "hu": "Egy jegy létrehozása, ha egy ügyfél regisztrálja magát."
-    }
+    },
+    "exclude_files" : [
+        "doc/CustomerSelfRegistrationCreateTicket.json"
+    ]
 }

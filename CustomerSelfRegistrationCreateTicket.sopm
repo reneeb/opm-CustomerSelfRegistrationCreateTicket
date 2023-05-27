@@ -18,6 +18,5 @@
         <File Permission="644" Location="Kernel/Config/Files/XML/CustomerSelfRegistrationCreateTicket.xml" />
         <File Permission="644" Location="Kernel/Language/de_CustomerSelfRegistrationCreateTicket.pm" />
         <File Permission="644" Location="Kernel/Language/hu_CustomerSelfRegistrationCreateTicket.pm" />
-        <File Permission="644" Location="doc/CustomerSelfRegistrationCreateTicket.json" />
     </Filelist>
 </otrs_package>
